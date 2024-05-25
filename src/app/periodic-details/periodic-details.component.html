@@ -1,0 +1,23 @@
+<div class="side-bar-content-wrapper">
+<h5>Periodic details</h5>
+
+<form>
+
+  <mat-form-field>
+    <mat-label>Id</mat-label>
+    <input matInput [ngModel]="periodic()?.id" name="id" readonly>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [ngModel]="periodic()?.name" name="name" readonly>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Symbol</mat-label>
+    <input matInput [ngModel]="periodic()?.symbol" name="symbol" readonly>
+  </mat-form-field>
+
+  <a routerLink="/" mat-flat-button color="primary">Close</a>
+</form>
+</div>
