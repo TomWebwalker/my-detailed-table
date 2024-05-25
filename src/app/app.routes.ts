@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import {AppComponent} from "./app.component";
-import {PeriodicDetailsComponent} from "./periodic-details/periodic-details.component";
 
 export const routes: Routes = [
   {
@@ -9,7 +8,7 @@ export const routes: Routes = [
   },
   {
     path: ':id',
-    component: PeriodicDetailsComponent,
+    loadComponent: () => import('./periodic-details'),
     outlet: 'side-bar'
   }
 ];

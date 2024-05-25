@@ -21,14 +21,9 @@ import {MatAnchor} from "@angular/material/button";
   templateUrl: './periodic-details.component.html',
   styleUrl: './periodic-details.component.scss'
 })
-export class PeriodicDetailsComponent {
-
+export default class PeriodicDetailsComponent {
   private periodicDataService = inject(PeriodicDataService);
   readonly periodic = toSignal(inject(ActivatedRoute).params.pipe(
-    map(param => param['id']),
-    map(id => this.periodicDataService.getById(id))
+    map(param => this.periodicDataService.getById(param['id']))
   ));
-
-  constructor() {
-  }
 }
